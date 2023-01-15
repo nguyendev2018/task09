@@ -1,0 +1,13 @@
+/* layout
+------------------------------------------------------------*/
+body {
+    font-family: $main-fonts;
+    font-size: 1.4rem;
+    background-color: #bb1717;
+    line-height: 1.5;
+    min-height: 100vh;
+    @include sp {
+        min-width: 320px;
+    }
+}
+//-------------------------------------------------------

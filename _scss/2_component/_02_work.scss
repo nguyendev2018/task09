@@ -1,0 +1,93 @@
+.c-work {
+    overflow: hidden;
+
+    .l-container {
+        max-width: 1080px + 20px;
+        margin-left: auto;
+        padding-left: 20px;
+    }
+
+    .c-work__header {
+        text-align: center;
+    }
+
+    .c-work__main {
+        background: black;
+        display: flex;
+    }
+
+    .c-work__title {
+        font-size: 3.4rem;
+        color: $blue;
+        padding-bottom: 8px;
+        letter-spacing: 0.07em;
+        font-weight: 500;
+    }
+
+    .c-work__titlesub {
+        font-size: 1.6rem;
+        letter-spacing: 0.02em;
+        line-height: 1.75;
+        @include tab {
+            font-size: 1.4rem;
+            letter-spacing: 0.03em;
+            line-height: 1.7857;
+        }
+    }
+
+    .c-work__libary {
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .c-work__libaryimg {
+        width: 100%;
+        padding-bottom: 59%;
+        position: relative;
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .c-work__menu {
+        max-width: 560px;
+        counter-reset: job-counter;
+        padding-bottom: 12px;
+
+        li {
+            display: block;
+            position: relative;
+            color: #0080cc;
+            border: 1px solid #0080cc;
+            background-color: #fff;
+            padding: 11px 15px 10px 72px;
+            font-size: 1.8rem;
+            line-height: 1.695;
+            letter-spacing: 0.025em;
+            min-height: 57px;
+
+            &::before {
+                counter-increment: job-counter;
+                content: counter(job-counter);
+                left: 0;
+                top: 0;
+                position: absolute;
+                width: 54px;
+                height: 100%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #0080cc;
+                color: #fff;
+                font-size: 2rem;
+                font-weight: 400;
+            }
+        }
+    }
+}
